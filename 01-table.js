@@ -14,11 +14,18 @@
 // "9 x 6 = 54";
 // "10 x 6 = 60";
 
-
-
-
-function table(number) {
-    console.log("complete com o código aqui! :)");
+function table(number, limit) {
+    if (limit) {
+        console.log(`The table of ${number} is, by 1 until ${limit}:`);
+        for (i = 1; i <= limit; i++) {
+            console.log(`${i} x ${number} = ${i * number}`);
+        }
+    } else {
+        console.log(`The table of ${number} is:`);
+        for (i = 1; i <= 10; i++) {
+            console.log(`${i} x ${number} = ${i * number}`);
+        }
+    }
 }
 
 table(2);
@@ -27,4 +34,4 @@ table(2);
 // Agora coloque mais um parâmetro na função: ao invés da tabuada ir de 1 a 10, 
 // agora ela pode ir de 1 até x.
 
-
+table(2, 5);
