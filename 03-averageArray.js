@@ -10,7 +10,13 @@
 const exampleArray = [23, 14, 5, 300, 2];
 
 function averageArray(array) {
-    console.log("complete com o código aqui! :)");
+    let sum = 0;
+
+    for (const number of array) {
+        sum += number;
+    }
+
+    return sum / exampleArray.length;
 }
 
 
