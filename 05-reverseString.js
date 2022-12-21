@@ -20,13 +20,13 @@ const exampleString = 'Gorila';
 
 function reverseString(string) {
     let reversedString = '';
-    for(let i = string.length -1; i >= 0; i--) {
+    for (let i = string.length - 1; i >= 0; i--) {
         reversedString = reversedString + string[i];
     }
-   return reversedString;
+    return reversedString;
 }
 
-reverseString(exampleString);
+console.log(reverseString(exampleString));
 
 // --------
 
@@ -34,7 +34,7 @@ const examplePalindrome = "reviver";
 
 function palindrome(string) {
     const reversedString = reverseString(examplePalindrome);
-    console.log("complete com o código aqui! :)");
+    return string === reversedString;
 }
 
 
