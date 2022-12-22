@@ -5,18 +5,32 @@
 let exampleArray = [573, 105, 13, 10, 52];
 
 function sort(array) {
-    console.log("complete com o código aqui! :)");
+    let resultArray = array;
+    let repeat = true;
+    while (repeat) {
+        repeat = false;
+        for (let i = 0; i <= array.length - 1; i++) {
+            if (array[i + 1] < array[i]) {
+                let memo = array[i];
+                array[i] = array[i + 1];
+                array[i + 1] = memo;
+                repeat = true;
+            }
+        }
+    }
+    return resultArray;
 }
 
-
-
+console.log("Resultado:");
+console.log(sort(exampleArray));
+console.log("-----");
 
 // ________________________ TEST ________________________
 console.log('TESTS:')
 function compareArrays(a, b) {
     return a.length === b.length && a.every((value, index) => value === b[index]);
 }
-if(compareArrays(sort(exampleArray), exampleArray.sort())) {
+if (compareArrays(sort(exampleArray), exampleArray.sort())) {
     console.log("✅ passed");
 } else {
     console.log("❌ failed");
