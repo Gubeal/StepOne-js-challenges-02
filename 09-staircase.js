@@ -21,9 +21,19 @@
 // ######
 
 function staircase(n) {
-	console.log("complete com o código aqui! :)");
+	let line = '';
+	for (let row = n - 1; row >= 0; row--) {
+		for (let column = 0; column <= n; column++) {
+			if (column > row) {
+				line += '#';
+			} else {
+				line += ' ';
+			}
+		}
+		console.log(line);
+		line = '';
+	}
 }
-
 
 
 
